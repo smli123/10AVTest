@@ -14,6 +14,7 @@ import com.sherman.smartlockex.processhandler.SmartLockEventHandler;
 import com.sherman.smartlockex.processhandler.SmartLockMessage;
 import com.sherman.smartlockex.ui.common.PubDefine;
 import com.sherman.smartlockex.ui.common.PubFunc;
+import com.sherman.smartlockex.ui.common.PubStatus;
 import com.sherman.smartlockex.ui.common.StringUtils;
 import com.sherman.smartlockex.ui.smartlockex.AppServerReposeDefine;
 import com.sherman.smartlockex.ui.smartlockex.SmartLockApplication;
@@ -114,7 +115,7 @@ public class SendCmdToSocketRunnable  implements Runnable{
 				
 				PubDefine.g_userCookie  = msg_buffer[0];
 				String cmd              = msg_buffer[1];
-				//PubStatus.g_CurUserName = msg_buffer[2];
+				PubStatus.g_CurUserName = msg_buffer[2];
 				PubDefine.g_moduleId    = msg_buffer[3];
 					
 				String[] txt_buffer = new String[msg_buffer.length - 4];

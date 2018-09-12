@@ -28,6 +28,7 @@ import android.widget.TextView;
 
 import com.sherman.smartlockex.R;
 import com.sherman.smartlockex.ui.common.PubDefine;
+import com.sherman.smartlockex.ui.common.PubStatus;
 import com.sherman.smartlockex.ui.common.SmartLockFragmentPagerAdapter;
 import com.sherman.smartlockex.ui.dev.DeviceFragment;
 import com.sherman.smartlockex.ui.login.LoginActivity;
@@ -74,7 +75,7 @@ public class SmartLockActivity extends FragmentActivity
 		SmartLockApplication.resetTask();
 
 		mSharedPreferences = getSharedPreferences("PARAMETERCONFIG"
-				+ PubDefine.g_CurUserName, Activity.MODE_PRIVATE);
+				+ PubStatus.g_CurUserName, Activity.MODE_PRIVATE);
 
 		loadData();
 

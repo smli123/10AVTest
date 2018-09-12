@@ -118,12 +118,5 @@ public class PubDefine {
 	public static int SERVER_PORT = 5000;
 	public static int LOCAL_PORT = 5002;
 	public static int MODULE_PORT = 5003;
-	
-	public static String g_CurUserName = "";
-	public static String g_userPwd = "";
-	public static String g_userPhone = "";
-	public static String g_userEmail = "";
-	public static String g_moduleId = "";
-	public static String g_userCookie = "";
 
 }
