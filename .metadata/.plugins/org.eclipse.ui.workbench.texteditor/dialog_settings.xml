@@ -6,37 +6,37 @@
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="iv_light_control_timecurve" key="selection"/>
+		<item value="sendMsg" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
-			<item value="iv_light_control_timecurve"/>
-			<item value="iv_light_control"/>
-			<item value="StartActivi"/>
 			<item value="sendmsg"/>
-			<item value="Time"/>
-			<item value="Type."/>
-			<item value="send2Server"/>
-			<item value="R.string.smartplug_"/>
+			<item value="settitle"/>
+			<item value="id.tv_re"/>
+			<item value="tv_register"/>
+			<item value="id.register_ok"/>
+			<item value="mEdtPwdCfg"/>
+			<item value="oncreate"/>
+			<item value="mInfo"/>
 		</list>
 		<list key="replacehistory">
+			<item value="smartlock"/>
+			<item value="SmartLock"/>
+			<item value="SmartLockApplication"/>
+			<item value="SmartLockMessage"/>
 			<item value="R.string.smartlock_"/>
 			<item value="smartlock_"/>
-			<item value="SmartLockApplication"/>
 			<item value="_LOCK_"/>
 			<item value="_lock_"/>
-			<item value="门锁"/>
-			<item value="position_dev"/>
-			<item value="cur_index"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
 		<item value="273" key="DIALOG_WIDTH"/>
 		<item value="1|Microsoft YaHei UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Microsoft YaHei UI" key="DIALOG_FONT_NAME"/>
 		<item value="381" key="DIALOG_HEIGHT"/>
-		<item value="1284" key="DIALOG_X_ORIGIN"/>
-		<item value="165" key="DIALOG_Y_ORIGIN"/>
+		<item value="1282" key="DIALOG_X_ORIGIN"/>
+		<item value="232" key="DIALOG_Y_ORIGIN"/>
 	</section>
 </section>

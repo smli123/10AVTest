@@ -1,12 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="com.thingzdo.ui.common.StringUtils"/>
-<fullyQualifiedTypeName name="com.thingzdo.ui.common.PubDefine"/>
-<fullyQualifiedTypeName name="android.widget.AdapterView"/>
-<fullyQualifiedTypeName name="com.thingzdo.ui.control.DetailSmartCarActivity"/>
-<fullyQualifiedTypeName name="java.util.Calendar"/>
-<fullyQualifiedTypeName name="android.util.Log"/>
-<fullyQualifiedTypeName name="com.thingzdo.processhandler.SmartPlugEventHandlerGetWeight"/>
 <fullyQualifiedTypeName name="com.thingzdo.processhandler.SmartPlugEventHandlerGetMaopi"/>
 <fullyQualifiedTypeName name="android.os.Handler"/>
 <fullyQualifiedTypeName name="android.view.Window"/>
@@ -42,22 +35,29 @@
 <fullyQualifiedTypeName name="com.sherman.smartlockex.ui.message.MessageFragment"/>
 <fullyQualifiedTypeName name="com.sherman.smartlockex.ui.setting.SettingFragment"/>
 <fullyQualifiedTypeName name="com.sherman.smartlockex.ui.common.SmartLockFragmentPagerAdapter"/>
-<fullyQualifiedTypeName name="com.sherman.smartlockex.ui.smartlockex.SmartLockActivity"/>
 <fullyQualifiedTypeName name="com.sherman.smartlockex.ui.dev.DeviceFragment2"/>
 <fullyQualifiedTypeName name="com.sherman.smartlockex.ui.dev.DeviceFragment3"/>
 <fullyQualifiedTypeName name="com.sherman.smartlockex.ui.common.CmdDefine"/>
 <fullyQualifiedTypeName name="com.sherman.smartlockex.ui.common.ServerErrCodeMgr"/>
-<fullyQualifiedTypeName name="com.sherman.smartlockex.R"/>
-<fullyQualifiedTypeName name="com.sherman.smartlockex.ui.smartlockex.SmartLockApplication"/>
-<fullyQualifiedTypeName name="com.sherman.smartlockex.ui.common.StringUtils"/>
-<fullyQualifiedTypeName name="com.sherman.smartlockex.ui.smartlockex.AppServerReposeDefine"/>
 <fullyQualifiedTypeName name="com.sherman.smartlockex.processhandler.SmartLockEventHandler"/>
-<fullyQualifiedTypeName name="com.sherman.smartlockex.ui.common.PubFunc"/>
-<fullyQualifiedTypeName name="com.sherman.smartlockex.ui.common.PubDefine"/>
-<fullyQualifiedTypeName name="com.sherman.smartlockex.processhandler.SmartLockMessage"/>
 <fullyQualifiedTypeName name="java.lang.String"/>
 <fullyQualifiedTypeName name="com.thingzdo.smartplug_udp.R.drawable"/>
 <fullyQualifiedTypeName name="com.thingzdo.ui.control.DetailGrowLightActivity"/>
 <fullyQualifiedTypeName name="android.widget.SeekBar"/>
 <fullyQualifiedTypeName name="com.thingzdo.smartplug_udp.R.id"/>
+<fullyQualifiedTypeName name="com.sherman.smartlockex.ui.smartlockex.AppServerReposeDefine"/>
+<fullyQualifiedTypeName name="com.sherman.smartlockex.internet.AsyncResult"/>
+<fullyQualifiedTypeName name="com.sherman.smartlockex.internet.SendMsgProxy"/>
+<fullyQualifiedTypeName name="com.sherman.smartlockex.ui.common.PubFunc"/>
+<fullyQualifiedTypeName name="com.sherman.smartlockex.ui.smartlockex.SmartLockApplication"/>
+<fullyQualifiedTypeName name="com.sherman.smartlockex.ui.common.StringUtils"/>
+<fullyQualifiedTypeName name="com.sherman.smartlockex.processhandler.SmartLockMessage"/>
+<fullyQualifiedTypeName name="com.sherman.smartlockex.ui.common.TitledActivity"/>
+<fullyQualifiedTypeName name="com.sherman.smartlockex.ui.smartlockex.SmartLockActivity"/>
+<fullyQualifiedTypeName name="com.sherman.smartlockex.ui.common.PubDefine"/>
+<fullyQualifiedTypeName name="com.sherman.smartlockex.R"/>
+<fullyQualifiedTypeName name="com.sherman.smartlockex.ui.common.PubStatus"/>
+<fullyQualifiedTypeName name="com.sherman.smartlockex.ui.common.RegisterInfo"/>
+<fullyQualifiedTypeName name="com.sherman.smartlockex.ui.login.RegisterActivity"/>
+<fullyQualifiedTypeName name="com.sherman.smartlockex.ui.login.FindPwdActivity"/>
 </qualifiedTypeNameHistroy>
