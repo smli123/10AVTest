@@ -80,7 +80,6 @@ public class RegisterActivity extends TitledActivity
     	SmartLockApplication.resetTask();
     	SmartLockApplication.getInstance().addActivity(this);
     	
-    	setTitle(R.string.login_register);
     	setTitleLeftButton(R.string.smartlock_goback, R.drawable.title_btn_selector, this); 
     	//setTitleRightButton(R.string.carguard_ok, R.drawable.title_btn_selector, this);
     	 

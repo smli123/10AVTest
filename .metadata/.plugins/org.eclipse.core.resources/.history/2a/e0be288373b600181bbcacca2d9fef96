@@ -128,7 +128,7 @@
         	android:layout_width="match_parent"
         	android:layout_height="wrap_content"
       		android:layout_marginTop="5dp"
-        	android:visibility="gone">
+        		android:visibility="gone">
 			
     		<ImageView
     		    android:id="@+id/img_confirmPwd"
@@ -175,8 +175,7 @@
 	        android:layout_width="match_parent"
 	        android:layout_height="0.5dp"
 	        android:layout_marginTop="5dp"
-	        android:background="@color/alertdialog_line"
-        	android:visibility="gone"/>       	
+	        android:background="@color/alertdialog_line"/>       	
     
     	<RelativeLayout
         	android:layout_width="match_parent"
