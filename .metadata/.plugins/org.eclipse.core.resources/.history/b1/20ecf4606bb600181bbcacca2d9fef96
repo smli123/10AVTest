@@ -2,7 +2,6 @@ package com.sherman.smartlockex.internet;
 
 import com.sherman.smartlockex.ui.common.PubDefine;
 import com.sherman.smartlockex.ui.common.PubFunc;
-import com.sherman.smartlockex.ui.common.PubStatus;
 import com.sherman.smartlockex.ui.common.StringUtils;
 
 import android.os.Handler;
@@ -54,9 +53,9 @@ public class SendMsgProxy {
     	
     	int i = 0;
     	if (true == containCookie) {
-    		messageBin = new byte[PubStatus.g_userCookie.getBytes().length + 1 + msgBin.length];
-    		for (i = 0; i < PubStatus.g_userCookie.getBytes().length; i++) {
-    			messageBin[i] = (PubStatus.g_userCookie.getBytes())[i];
+    		messageBin = new byte[PubDefine.g_userCookie.getBytes().length + 1 + msgBin.length];
+    		for (i = 0; i < PubDefine.g_userCookie.getBytes().length; i++) {
+    			messageBin[i] = (PubDefine.g_userCookie.getBytes())[i];
     		}
     		messageBin[i++] = ','; 
 

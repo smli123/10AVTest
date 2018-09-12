@@ -2,7 +2,6 @@ package com.sherman.smartlockex.internet;
 
 import com.sherman.smartlockex.ui.common.PubDefine;
 import com.sherman.smartlockex.ui.common.PubFunc;
-import com.sherman.smartlockex.ui.common.PubStatus;
 import com.sherman.smartlockex.ui.common.StringUtils;
 
 import android.os.Handler;
@@ -20,7 +19,7 @@ public class SendMsgProxy {
     		PubStatus.g_userCookie = PubFunc.getTimeString();
     	}
     	if (true == containCookie) {
-    		message = PubStatus.g_userCookie + "," + msg;
+    		message = PubDefine.g_userCookie + "," + msg;
     	} else {
     		message = "0," + msg;
     	}
@@ -48,15 +47,15 @@ public class SendMsgProxy {
 //    		}
 //    	}
     	
-    	if (null == PubStatus.g_userCookie || PubStatus.g_userCookie.isEmpty()) {
-    		PubStatus.g_userCookie = PubFunc.getTimeString();
+    	if (null == PubDefine.g_userCookie || PubDefine.g_userCookie.isEmpty()) {
+    		PubDefine.g_userCookie = PubFunc.getTimeString();
     	}
     	
     	int i = 0;
     	if (true == containCookie) {
-    		messageBin = new byte[PubStatus.g_userCookie.getBytes().length + 1 + msgBin.length];
-    		for (i = 0; i < PubStatus.g_userCookie.getBytes().length; i++) {
-    			messageBin[i] = (PubStatus.g_userCookie.getBytes())[i];
+    		messageBin = new byte[PubDefine.g_userCookie.getBytes().length + 1 + msgBin.length];
+    		for (i = 0; i < PubDefine.g_userCookie.getBytes().length; i++) {
+    			messageBin[i] = (PubDefine.g_userCookie.getBytes())[i];
     		}
     		messageBin[i++] = ','; 
 

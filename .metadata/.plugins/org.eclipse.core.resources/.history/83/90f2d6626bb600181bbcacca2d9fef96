@@ -2,7 +2,6 @@ package com.sherman.smartlockex.internet;
 
 import com.sherman.smartlockex.ui.common.PubDefine;
 import com.sherman.smartlockex.ui.common.PubFunc;
-import com.sherman.smartlockex.ui.common.PubStatus;
 import com.sherman.smartlockex.ui.common.StringUtils;
 
 import android.os.Handler;
