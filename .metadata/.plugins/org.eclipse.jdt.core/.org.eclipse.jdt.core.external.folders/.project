@@ -14,10 +14,5 @@
 			<type>2</type>
 			<location>F:/Android/android-sdk/sources/android-21</location>
 		</link>
-		<link>
-			<name>.link2</name>
-			<type>2</type>
-			<location>F:/Android/android-sdk/sources/android-19</location>
-		</link>
 	</linkedResources>
 </projectDescription>

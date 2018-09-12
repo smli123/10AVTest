@@ -37,6 +37,17 @@
             android:theme="@android:style/Theme.Holo.NoActionBar"
             android:label="@string/app_name" />
             
+        <activity 
+            android:name="com.sherman.smartlockex.ui.login.RegisterActivity"
+            android:theme="@android:style/Theme.Holo.NoActionBar"
+            android:label="@string/app_name" />
+            
+        <activity 
+            android:name="com.sherman.smartlockex.ui.login.FindPwdActivity"
+            android:theme="@android:style/Theme.Holo.NoActionBar"
+            android:label="@string/app_name" />
+            
+        
     </application>
 
 </manifest>

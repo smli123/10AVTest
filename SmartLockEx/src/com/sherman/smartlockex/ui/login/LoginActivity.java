@@ -125,11 +125,15 @@ public class LoginActivity extends Activity implements OnClickListener {
 	}
 	
 	private void net_register() {
-		
+		Intent act = new Intent();
+		act.setClass(LoginActivity.this, RegisterActivity.class);
+		mContext.startActivity(act);
 	}
 	
 	private void net_forget_password() {
-		
+		Intent act = new Intent();
+		act.setClass(LoginActivity.this, FindPwdActivity.class);
+		mContext.startActivity(act);
 	}
 
 	private void delete_username() {

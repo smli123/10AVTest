@@ -366,7 +366,7 @@ public class SmartLockActivity extends FragmentActivity
 					.setPositiveButton(this.getString(R.string.smartlock_ok),
 							okListener)
 					.setNegativeButton(
-							this.getString(R.string.smartplug_cancel),
+							this.getString(R.string.smartlock_cancel),
 							new View.OnClickListener() {
 								@Override
 								public void onClick(View arg0) {
