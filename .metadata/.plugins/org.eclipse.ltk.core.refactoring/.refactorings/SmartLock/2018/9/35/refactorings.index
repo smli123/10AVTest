@@ -1,0 +1,47 @@
+1535784511767	Rename resource 'activity_main.xml'
+1535784529521	Rename type 'MainActivity'
+1535784848607	Move file
+1535784864103	Move file
+1535785002015	Move file
+1535785016988	Move file
+1535785024813	Delete element
+1535785029035	Move folder
+1535785032955	Move folder
+1535785290439	Delete elements
+1535785712456	Rename package 'com.lishimin.smartlock'
+1535785806673	Rename package 'com.thingzdo.dataprovider'
+1535785826134	Delete element
+1535785834683	Rename package 'com.thingzdo.internet'
+1535785863971	Rename package 'com.thingzdo.mail'
+1535786000404	Delete element
+1535786016601	Rename package 'com.thingzdo.ui'
+1535786046117	Rename package 'com.thingzdo.ui.common'
+1535786188616	Rename package 'com.thingzdo.util'
+1535786218158	Rename package 'com.thingzdo.ui.wifi'
+1535786427701	Rename package 'com.thingzdo.ui.smartplug'
+1535786479008	Delete elements
+1535786485650	Delete elements
+1535786503116	Delete element
+1535786579409	Rename type 'ActivityWelcome'
+1535786602969	Rename package 'com.thingzdo.dataprovider'
+1535786613717	Rename package 'com.thingzdo.internet'
+1535786620636	Rename package 'com.thingzdo.mail'
+1535786630274	Rename package 'com.thingzdo.processhandler'
+1535786635279	Rename package 'com.thingzdo.RevMsgNotification'
+1535786651934	Rename package 'com.thingzdo.smartplug.ui.share'
+1535786658915	Rename package 'com.thingzdo.SwipeMenuListView'
+1535786665766	Rename package 'com.thingzdo.ui'
+1535786673835	Rename package 'com.thingzdo.ui.common'
+1535786681333	Rename package 'com.thingzdo.ui.control'
+1535786689703	Rename package 'com.thingzdo.ui.login'
+1535786696860	Rename package 'com.thingzdo.ui.manage'
+1535786703223	Rename package 'com.thingzdo.ui.shakeshake'
+1535786762392	Delete element
+1535786772951	Rename package 'com.thingzdo.ui.smartplug'
+1535786781068	Rename package 'com.thingzdo.ui.wheelutils'
+1535786791314	Rename package 'com.thingzdo.ui.wifi'
+1535786800536	Rename package 'com.thingzdo.util'
+1535787123849	Delete element
+1535787134821	Move compilation unit
+1535787138337	Delete element
+1535787900824	Delete element

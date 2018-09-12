@@ -1,0 +1,15 @@
+package com.thingzdo.ui;
+
+public class SceneDefine {
+	public int mId;
+	public String mSceneName;
+	public int mSceneId;
+	public boolean mPowerEnable;
+	public boolean mPowerStatus;
+	public boolean mCurtainEnable;
+	public boolean mCurtainStatus;
+	public boolean mAirConEnable;
+	public boolean mAirConStatus;
+	public boolean mPCEnable;
+	public boolean mPCStatus;
+}

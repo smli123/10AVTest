@@ -1,0 +1,64 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#424242"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.lishimin.memo.MainActivity" >
+
+    <RelativeLayout
+        android:id="@+id/rl_operation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <Button
+	        android:id="@+id/btn_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+	        android:layout_alignParentLeft="true"
+            android:text="取消"
+            android:textColor="#FFFFFF"
+            android:textSize="24dp" />
+        
+	    <Button
+	        android:id="@+id/btn_ok"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentRight="true"
+	        android:text="确定"
+	        android:textColor="#FFFFFF"
+	        android:textSize="24dp" />
+
+    </RelativeLayout>
+    
+    <RelativeLayout
+        android:id="@+id/rl_car_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:layout_below="@id/rl_operation"
+        android:paddingTop="10dp">
+
+        <TextView
+	        android:id="@+id/tv_car_card"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="车牌号:"
+            android:textColor="#FFFFFF"
+            android:textSize="24dp" />
+        
+	    <EditText
+	        android:id="@+id/et_car_card"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentRight="true"
+	        android:layout_toRightOf="@+id/tv_car_card"
+	        android:text="粤B"
+	        android:textColor="#FFFFFF"
+	        android:textSize="24dp" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

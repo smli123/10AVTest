@@ -1,0 +1,137 @@
+1535966147699	Delete element
+1535966154621	Delete element
+1535966164532	Delete elements
+1535966212418	Delete elements
+1535966219642	Delete elements
+1535966253738	Rename type 'ActionHelper'
+1535966283777	Delete elements
+1535966445235	Rename type 'ThingzdoAuthenticator'
+1535966464175	Rename package 'com.lishimin.smartlock.dataprovider'
+1535966477200	Rename package 'com.lishimin.smartlock.internet'
+1535966485320	Rename package 'com.lishimin.smartlock.mail'
+1535966494843	Rename package 'com.lishimin.smartlock.processhandler'
+1535966500998	Rename package 'com.lishimin.smartlock.RevMsgNotification'
+1535966508968	Rename package 'com.lishimin.smartlock.SwipeMenuListView'
+1535966516717	Rename package 'com.lishimin.smartlock.ui'
+1535966531223	Rename package 'com.lishimin.smartlock.ui.common'
+1535966538241	Rename package 'com.lishimin.smartlock.ui.control'
+1535966544918	Rename package 'com.lishimin.smartlock.ui.login'
+1535966552542	Rename package 'com.lishimin.smartlock.ui.manage'
+1535966560172	Rename package 'com.lishimin.smartlock.ui.shakeshake'
+1535966565483	Rename package 'com.lishimin.smartlock.ui.share'
+1535966573155	Rename package 'com.lishimin.smartlock.ui.smartplug'
+1535966580184	Rename package 'com.lishimin.smartlock.ui.wheelutils'
+1535966586377	Rename package 'com.lishimin.smartlock.ui.wifi'
+1535966592957	Rename package 'com.lishimin.smartlock.util'
+1535966627907	Rename type 'SmartPlugEventHandler'
+1535966634639	Rename type 'SmartPlugEventHandlerAddIRScene'
+1535966642095	Rename type 'SmartPlugEventHandlerAddPlug'
+1535966677783	Rename type 'SmartPlugEventHandlerAddScene'
+1535966683022	Rename type 'SmartPlugEventHandlerAddTimer'
+1535966688030	Rename type 'SmartPlugEventHandlerAirCon'
+1535966693436	Rename type 'SmartPlugEventHandlerAirConServer'
+1535966699395	Rename type 'smartPlugEventHandlerAirConServerIRData'
+1535966704861	Rename type 'SmartPlugEventHandlerALED'
+1535966710824	Rename type 'SmartPlugEventHandlerApplyScene'
+1535966715942	Rename type 'SmartPlugEventHandlerBACK2AP'
+1535966721704	Rename type 'SmartPlugEventHandlerBatteryNotifyEnerge'
+1535966727774	Rename type 'SmartPlugEventHandlerBatteryQueryEnerge'
+1535966734670	Rename type 'SmartPlugEventHandlerBatteryQueryTrail'
+1535966754957	Delete elements
+1535966760360	Rename type 'SmartPlugEventHandlerLight'
+1535966768596	Rename type 'SmartPlugEventHandlerCurtain'
+1535966773227	Delete element
+1535966780844	Delete elements
+1535966785067	Delete element
+1535966788672	Delete element
+1535966794204	Delete element
+1535966796992	Delete element
+1535966799285	Delete element
+1535966801490	Delete element
+1535966807894	Delete element
+1535966822505	Rename type 'SmartPlugEventHandlerDeletePlug'
+1535966830062	Rename type 'SmartPlugEventHandlerLogin'
+1535966835452	Rename type 'SmartPlugEventHandlerLogout'
+1535966843242	Rename type 'SmartPlugEventHandlerMap'
+1535966849960	Rename type 'SmartPlugEventHandlerModifyEmail'
+1535966854359	Delete element
+1535966861012	Rename type 'SmartPlugEventHandlerModifyPlugName'
+1535966866781	Rename type 'SmartPlugEventHandlerModifyPwd'
+1535966874486	Delete element
+1535966887061	Rename type 'SmartPlugEventHandlerNotifyCurtain'
+1535966893658	Rename type 'SmartPlugEventHandlerNotifyKettle'
+1535966900951	Rename type 'SmartPlugEventHandlerNotifyLight'
+1535966908141	Rename type 'SmartPlugEventHandlerNotifyOnline'
+1535966914908	Rename type 'SmartPlugEventHandlerNotifyPower'
+1535966918082	Delete element
+1535966929953	Rename type 'SmartPlugEventHandlerNotifyUpgradeAPStatus'
+1535966937906	Delete element
+1535966943951	Rename type 'SmartPlugEventHandlerPower'
+1535966948495	Delete element
+1535966951051	Delete element
+1535966959744	Delete elements
+1535966965864	Rename type 'SmartPlugEventHandlerRegister'
+1535966972329	Rename type 'SmartPlugEventHandlerResetPwd'
+1535966981519	Rename type 'SmartPlugEventHandlerRGB'
+1535966985710	Delete element
+1535966990488	Delete elements
+1535966997739	Delete element
+1535967004808	Rename type 'SmartPlugEventHandlerUSB'
+1535967012709	Rename type 'SmartPlugMessage'
+1535967436322	Delete element
+1535967548045	Delete element
+1535967550399	Delete element
+1535967552750	Delete element
+1535967554953	Delete element
+1535968635840	Delete element
+1535968639088	Delete element
+1535968641881	Delete element
+1535968644522	Delete element
+1535968647227	Delete element
+1536024566284	Delete elements
+1536024583845	Delete elements
+1536024587038	Delete element
+1536024625360	Delete elements
+1536024657391	Delete elements
+1536024664355	Delete element
+1536024704162	Rename type 'ThingzdoCheckBox'
+1536024710431	Delete element
+1536024723429	Rename type 'ThingzdoPickerView'
+1536025047442	Delete element
+1536025049816	Delete element
+1536028902520	Rename type 'UserHelper'
+1536030135923	Delete element
+1536031340414	Delete element
+1536031350835	Rename type 'AboutUs_v2Activity'
+1536032313617	Rename resource 'activity_about_v2.xml'
+1536032326792	Rename resource 'activity_about.xml'
+1536032343345	Rename resource 'activity_aboutus.xml'
+1536032722574	Delete element
+1536053523825	Copy file
+1536222906640	Copy compilation unit
+1536223112240	Copy compilation units
+1536223474784	Copy file
+1536223753331	Copy compilation unit
+1536223868448	Copy compilation unit
+1536224210547	Copy compilation unit
+1536226205910	Copy file
+1536227520236	Copy file
+1536304456363	Copy compilation unit
+1536304982218	Copy compilation unit
+1536305088099	Copy compilation unit
+1536305095560	Copy compilation unit
+1536305227293	Copy compilation unit
+1536306478692	Copy compilation unit
+1536306831774	Copy file
+1536375157118	Copy compilation units
+1536375183367	Copy file
+1536375805018	Copy compilation units
+1536375897586	Copy compilation unit
+1536376012940	Copy compilation units
+1536376562179	Copy compilation unit
+1536376673934	Copy compilation units
+1536376691468	Copy compilation unit
+1536376707535	Copy compilation unit
+1536377067653	Copy compilation unit
+1536377161838	Copy compilation unit
+1536377212093	Copy compilation unit

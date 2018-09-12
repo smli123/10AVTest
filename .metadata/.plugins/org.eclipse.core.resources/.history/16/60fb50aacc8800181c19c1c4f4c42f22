@@ -1,0 +1,54 @@
+import android.content.Intent;
+import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
+import android.text.TextUtils;
+import android.view.View;
+import android.widget.EditText;
+import android.widget.Toast;
+
+import com.google.testapp.R;
+
+public class MainActivity extends ActionBarActivity {
+    public static final String NAME = "name";
+    public static final String PSW = "psw";
+    public static final String UID = "uid";
+    private EditText et_name;
+    private EditText et_pwd;
+    private EditText et_uid;
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        initView();
+    }
+    /**
+     * 初始化子控件
+     */
+    private void initView() {
+
+        et_name = (EditText) findViewById(R.id.et_devname);
+        et_pwd = (EditText) findViewById(R.id.et_psw);
+        et_uid = (EditText) findViewById(R.id.et_uid);
+    }
+    /**
+     * 点击Button 开始链接
+     *
+     * @param view
+     */
+    public void connect(View view) {
+        String name = et_name.getText().toString();
+        String pwd = et_pwd.getText().toString();
+        String uid = et_uid.getText().toString();
+        if (TextUtils.isEmpty(name) || TextUtils.isEmpty(pwd) ||
+                TextUtils.isEmpty(uid)) {
+            Toast.makeText(this, "数据不能为空。", Toast.LENGTH_SHORT).show();
+            return;
+        }
+        Intent intent = new Intent(this, CameraPlayActivity.class);
+        intent.putExtra(NAME, name);
+        intent.putExtra(PSW, pwd);
+        intent.putExtra(UID, uid);
+        //跳转到播放页面
+        startActivity(intent);
+    }
+}

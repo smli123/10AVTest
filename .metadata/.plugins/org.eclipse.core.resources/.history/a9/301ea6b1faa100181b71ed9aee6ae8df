@@ -1,0 +1,30 @@
+package com.lishimin.robotcontroller;
+
+import java.io.IOException;
+import java.net.Socket;
+import java.net.UnknownHostException;
+
+public class UDPSendMsg {
+	private static Socket udpSocket = null;
+	private static UDPSendMsg sMe = null;
+	
+	public UDPSendMsg getInstance() {
+		if (sMe == null) {
+			sMe = new UDPSendMsg();
+		}
+		return sMe;
+	}
+	
+	public UDPSendMsg () {
+		if (udpSocket == null) {
+			try {
+				udpSocket = new Socket("192.168.4.1", 5003);
+			} catch (UnknownHostException e) {
+				e.printStackTrace();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
+	}
+			
+}

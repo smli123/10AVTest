@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">SmartLockEx</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="app_version_unknown">Unknown version</string>
+    
+    <string name="smartlock_title_dev">设备</string>
+    <string name="smartlock_title_message">消息</string>
+    <string name="smartlock_title_settings">我的</string>
+    
+    <string name="smartlock_exit">退出</string>
+    <string name="smartlock_ok">确认</string>
+    
+
+</resources>

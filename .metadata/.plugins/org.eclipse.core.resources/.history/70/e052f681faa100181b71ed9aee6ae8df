@@ -1,0 +1,17 @@
+package com.lishimin.robotcontroller;
+
+import java.net.Socket;
+
+public class UDPSendMsg {
+	private static Socket udpSocket = null;
+	private static UDPSendMsg sMe = null;
+	
+	public UDPSendMsg getInstance() {
+		if (sMe == null) {
+			sMe = new UDPSendMsg();
+			
+		}
+		
+	}
+			
+}

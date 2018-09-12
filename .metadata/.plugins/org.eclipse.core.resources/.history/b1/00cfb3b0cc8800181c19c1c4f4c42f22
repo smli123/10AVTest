@@ -1,0 +1,284 @@
+package com.example.smartcamera;
+
+import android.app.Activity;
+import android.content.Intent;
+import android.graphics.Bitmap;
+import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.ImageButton;
+import android.widget.TextView;
+
+import com.google.testapp.R;
+import com.tutk.IOTC.AVIOCTRLDEFs;
+import com.tutk.IOTC.AVIOCTRLDEFs.SMsgAVIoctrlPtzCmd;
+import com.tutk.IOTC.Camera;
+import com.tutk.IOTC.IRegisterIOTCListener;
+import com.tutk.IOTC.Monitor;
+
+public class CameraPlayActivity extends Activity implements OnClickListener,
+        IRegisterIOTCListener {
+    private Monitor     monitor;
+    private ImageButton ib_left;
+    private ImageButton ib_right;
+    private ImageButton ib_top;
+    private ImageButton ib_bottom;
+    private TextView    tv_state;
+    private String      mName;
+    private String      mPsw;
+    private String      mUID;
+    private Camera      mCamera;
+    Handler handler = new Handler() {
+        @Override
+        public void handleMessage(android.os.Message msg) {
+            switch (msg.what) {
+                // 针对不同的连接状态做不同的处理
+                case Camera.CONNECTION_STATE_CONNECT_FAILED:
+                    tv_state.setText("连接失败");
+                    break;
+                // 如果是已经连接成功
+                case Camera.CONNECTION_STATE_CONNECTED:
+                    tv_state.setText("已连接");
+                    // 调用play（）方法，完成Camera 和Monitor 的绑定，最终将画面显示出来
+                    play();
+                    break;
+                case Camera.CONNECTION_STATE_CONNECTING:
+                    tv_state.setText("连接中...");
+                    break;
+                case Camera.CONNECTION_STATE_DISCONNECTED:
+                    tv_state.setText("未连接");
+                    break;
+                case Camera.CONNECTION_STATE_TIMEOUT:
+                    tv_state.setText("连接超时");
+                    break;
+                case Camera.CONNECTION_STATE_UNKNOWN_DEVICE:
+                    tv_state.setText("未知设备");
+                    break;
+                case Camera.CONNECTION_STATE_UNSUPPORTED:
+                    tv_state.setText("不支持的设备");
+                    break;
+                case Camera.CONNECTION_STATE_WRONG_PASSWORD:
+
+
+                    tv_state.setText("密码不正确");
+                    break;
+                case Camera.CONNECTION_STATE_NONE:
+                    tv_state.setText("未知错误");
+                    break;
+                default:
+                    tv_state.setText("未知" + msg.what);
+                    break;
+            }
+        }
+
+        ;
+    };
+
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_camera);
+        // 初始化控件
+        initView();
+        // 初始化数据
+        initData();
+        // 开始连接网络
+        connectNet();
+    }
+
+    /**
+     * 显示画面的核心方法
+     */
+    protected void play() {
+        /**
+         * 如果条件满足则<br>
+         * 1 将界面monitor 和Camera 进行绑定<br>
+         * 2 开始播放Camera 画面
+         *
+         */
+        if (mCamera != null && mCamera.isChannelConnected(Camera.DEFAULT_AV_CHANNEL)) {
+            monitor.attachCamera(mCamera, Camera.DEFAULT_AV_CHANNEL);
+            mCamera.startShow(Camera.DEFAULT_AV_CHANNEL, true);
+        }
+    }
+
+    private void connectNet() {
+        // 初始化摄像头内部加载c 语言库
+        Camera.init();
+        // 新创建一个Camera 实例不是Android 中的Camera 而是com.tutk.IOTC.Camera.Camera
+        mCamera = new Camera();
+        /**
+         * 给Camera 注册IOTC 监听<br>
+         * IOTC Internet of Things Cloud 物联网云平台<br>
+         * 该平台是台湾TUTK 公司推出，有偿使用，因此SDK 不开源
+         */
+        mCamera.registerIOTCListener(this);
+        /**
+         * 连接到IOTC 云平台<br>
+         * 连接传入的是UID <br>
+         * 每个硬件设备出厂时都有唯一的UID编号，并且出厂时已经将该编号注册到IOTC平台服务器<br>
+         * 硬件在连接服务器的时候需要带着自己的身边标识（就是UID）
+         */
+        mCamera.connect(mUID);
+        /**
+         * 仅仅让硬件连接网络还是不够了，作为终端用户我们想看到云平台上的摄像头画面那么还需要用户
+         * 通过用户名和密码登陆进行身份验证<br>
+         *
+         * @parameter Camera.DEFAULT_AV_CHANNEL
+         * 我们可以把一个摄像头硬件理解为一个电视机，那么电视机可以有多个频道，这里我
+         * 们使用默认频道即可
+         * @parameter mName 用户名<br>
+         * @parameter mPsw 密码<br>
+         *
+         * 当开始连接的时候，由于之前注册了Camera 监听，因此接收到的数据会以回调的形
+         * 式传到形参中
+         * ，因此这个时候我们就去IRegisterIOTCListener 的回调方法中等数据就行了
+         */
+        mCamera.start(Camera.DEFAULT_AV_CHANNEL, mName, mPsw);
+    }
+
+    /**
+     * 从上一个Activity 中获取用户数据
+     */
+    private void initData() {
+        Intent intent = getIntent();
+        mName = intent.getStringExtra(MainActivity.NAME);
+        mPsw = intent.getStringExtra(MainActivity.PSW);
+        mUID = intent.getStringExtra(MainActivity.UID);
+    }
+
+    /**
+     * 当前类已经实现了OnClickListener 接口因此绑定点击事件只需要传递this 即可
+     */
+    private void initView() {
+        monitor = (Monitor) findViewById(R.id.monitor);
+        ib_left = (ImageButton) findViewById(R.id.ib_left);
+        ib_right = (ImageButton) findViewById(R.id.ib_right);
+        ib_top = (ImageButton) findViewById(R.id.ib_top);
+        ib_bottom = (ImageButton) findViewById(R.id.ib_bottom);
+
+        tv_state = (TextView) findViewById(R.id.tv_state);
+        // 初始化点击事件
+        ib_bottom.setOnClickListener(this);
+        ib_left.setOnClickListener(this);
+        ib_right.setOnClickListener(this);
+        ib_top.setOnClickListener(this);
+    }
+
+    /**
+     * 上下左右点击事件的绑定
+     */
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.ib_left:
+                /**
+                 * 发送左移动画面指令<br>
+                 * PTZ ：在安防监控应用中是Pan/Tilt/Zoom 的简写，代表云台全方位（左右/上下）移
+                 * 动及镜头变倍、变焦控制。<br>
+                 * 因为上下左右都需要发送指令，因此我抽取出一个方法
+                 */
+                sendPTZ(AVIOCTRLDEFs.AVIOCTRL_PTZ_LEFT);
+                break;
+            case R.id.ib_right:
+                sendPTZ(AVIOCTRLDEFs.AVIOCTRL_PTZ_RIGHT);
+                break;
+            case R.id.ib_bottom:
+                sendPTZ(AVIOCTRLDEFs.AVIOCTRL_PTZ_DOWN);
+                break;
+            case R.id.ib_top:
+                sendPTZ(AVIOCTRLDEFs.AVIOCTRL_PTZ_UP);
+                break;
+        }
+    }
+
+    ;
+
+    /**
+     * 发送移动指令
+     */
+    private void sendPTZ(int type) {
+        /**
+         * 给摄像头发送指令
+         *
+         * @parameter Camera.DEFAULT_AV_CHANNEL 默认频道
+         * AVIOCTRLDEFs.IOTYPE_USER_IPCAM_PTZ_COMMAND 指令类型
+         * SMsgAVIoctrlPtzCmd.parseContent((byte) type, (byte) 0,
+         * (byte) 0, (byte) 0, (byte) 0, (byte)
+         * Camera.DEFAULT_AV_CHANNEL)
+
+         * 指令数据，第三个参数是字节数组我们直接使用SMsgAVIoctrlPtzCmd 类的
+         * parseContent 方法生成即可
+         *
+         */
+        mCamera.sendIOCtrl(Camera.DEFAULT_AV_CHANNEL,
+                AVIOCTRLDEFs.IOTYPE_USER_IPCAM_PTZ_COMMAND, SMsgAVIoctrlPtzCmd.parseContent((byte
+                        ) type, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) Camera
+                        .DEFAULT_AV_CHANNEL));
+    }
+
+    // 销毁时退出摄像头
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        quit();
+    }
+
+    /**
+     * 当接收到服务器的数据时回调该函数
+     *
+     * @param resultCode 返回状态码
+     */
+    @Override
+    public void receiveChannelInfo(Camera arg0, int channel, int resultCode) {
+        Message msg = Message.obtain();
+        msg.what = resultCode;
+        handler.sendMessage(msg);
+    }
+
+    @Override
+    public void receiveFrameData(Camera arg0, int arg1, Bitmap arg2) {
+    }
+
+    @Override
+    public void receiveFrameInfo(Camera arg0, int arg1, long arg2, int arg3, int arg4,
+                                 int arg5, int arg6) {
+
+    }
+
+    @Override
+    public void receiveIOCtrlData(Camera arg0, int arg1, int arg2, byte[] arg3) {
+    }
+
+    @Override
+    public void receiveSessionInfo(Camera arg0, int arg1) {
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+
+
+        quit();
+    }
+
+    /**
+     * 断开连接
+     */
+    private void quit() {
+        if (monitor != null) {
+            // 1.解除绑定
+            monitor.deattachCamera();
+            // 2.停止显示
+            mCamera.stopShow(Camera.DEFAULT_AV_CHANNEL);
+            // 3.断开连接
+            // 3.1 取消渠道号
+            mCamera.stop(Camera.DEFAULT_AV_CHANNEL);
+            // 3.2 断开连接
+            mCamera.disconnect();
+            // 4.注销监听
+            mCamera.unregisterIOTCListener(this);
+        }
+    }
+}
