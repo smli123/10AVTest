@@ -1,1 +1,11 @@
 .metadata
+Memo\bin
+Memo\gen
+Record\bin
+Record\gen
+SmartLock\bin
+SmartLock\gen
+SmartLockEx\bin
+SmartLockEx\gen
+TestAES\bin
+TestAES\gen
