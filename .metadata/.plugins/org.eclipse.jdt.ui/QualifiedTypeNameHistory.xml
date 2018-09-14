@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="com.thingzdo.processhandler.SmartPlugEventHandlerGetMaopi"/>
-<fullyQualifiedTypeName name="android.os.Handler"/>
 <fullyQualifiedTypeName name="android.view.Window"/>
 <fullyQualifiedTypeName name="android.view.WindowManager"/>
 <fullyQualifiedTypeName name="android.widget.ImageView"/>
@@ -60,4 +58,6 @@
 <fullyQualifiedTypeName name="com.sherman.smartlockex.ui.common.RegisterInfo"/>
 <fullyQualifiedTypeName name="com.sherman.smartlockex.ui.login.RegisterActivity"/>
 <fullyQualifiedTypeName name="com.sherman.smartlockex.ui.login.FindPwdActivity"/>
+<fullyQualifiedTypeName name="com.thingzdo.dataprovider.SmartPlugGrowLightTimerHelper"/>
+<fullyQualifiedTypeName name="com.thingzdo.ui.control.DetailGrowLightTimeTaskActivity"/>
 </qualifiedTypeNameHistroy>

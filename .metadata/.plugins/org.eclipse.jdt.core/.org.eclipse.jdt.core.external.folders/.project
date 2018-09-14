@@ -10,11 +10,6 @@
 	</natures>
 	<linkedResources>
 		<link>
-			<name>.link1</name>
-			<type>2</type>
-			<location>F:/Android/android-sdk/sources/android-21</location>
-		</link>
-		<link>
 			<name>.link3</name>
 			<type>2</type>
 			<location>F:/Android/android-sdk/sources/android-19</location>
